@@ -12,8 +12,8 @@
       },
       "Docker": {
         "Entrypoint": [
-          "echo",
-          {{if .Message}}{{.Message}}{{else}}"Pass me an input called Message, like lilypad run cowsay:v0.0.2 -i Message=moo"{{end}}
+          "apt install -y python",
+          "python -m http.server"
         ],
         "Image": "ubuntu:latest"
       },
